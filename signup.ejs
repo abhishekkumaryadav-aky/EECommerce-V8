@@ -1,0 +1,57 @@
+<%-include('../partials/header')%>
+<%-include('../partials/navbar')%>
+
+
+
+<div class="row" style="margin-top: 80px;">
+    <div class="col-6 mx-auto">
+        <h1 class="display-6">Signup Form</h1>
+        <form action="/register" method="POST">
+            <div class="mb-3">
+                <label for="username" class="form-label">Username : </label>
+                <input type="text" class="form-control" name="username" id="username" placeholder="Name of User" required>
+            </div>
+            <div class="mb-3">
+                <label for="mail" class="form-label">Email : </label>
+                <input type="email" class="form-control" name="email" id="mail" placeholder="Email of the User" required>
+            </div>
+            <div class="mb-3">
+                <p class="mt-2">Want to register as? </p>
+                <div>
+                    &nbsp;&nbsp;&nbsp;<label for="role" class="form-label">Buyer : </label>
+                    <input type="radio" class="form-check-input" name="role" id="role" placeholder="role of the User" value="buyer" required>
+                &nbsp;&nbsp;&nbsp;
+                    <label for="role" class="form-label">Seller : </label>
+                    <input type="radio" class="form-check-input" name="role" id="role" placeholder="role of the User" value="seller" required>
+                </div>
+                <!-- <br> -->
+                <p class="mt-2">Want to register as? </p>
+                <div>
+                <label for="gender" class="form-label">Female : </label>
+                <input type="radio" class="form-check-in" name="gender" id="gender" placeholder="Gender of the User" value="Female" required>
+
+                &nbsp;&nbsp;
+                <label for="gender" class="form-label">Male : </label>
+                <input type="radio" class="form-check-in" name="gender" id="gender" placeholder="Gender of the User"value="Male" required>
+                &nbsp;&nbsp;
+                <label for="gender" class="form-label">Prefer not to respond : </label>
+                <input type="radio" class="form-check-in" name="gender" id="gender" placeholder="Gender of the User"value="Prefer not to respond" required>
+                
+            <!-- </div>
+
+                <label for="gender" class="form-label">Gender : </label>
+                <input type="text" class="form-control" name="gender" id="gender" placeholder="Gender of the User" required>
+            </div> -->
+            <div class="mb-3">
+                <label for="password" class="form-label">Password : </label>
+                <input type="password" class="form-control" name="password" id="password" placeholder="Please Enter the Passowrd" required>
+            </div>
+            <button type="submit" class="btn btn-sm btn-success">Signup</button>
+            <p class="mt-2">Already have an account? <a href="/login">Login now</a></p>
+        </form>
+    </div>
+</div>
+
+
+<script src="/js/script.js"></script>
+<%-include('../partials/footer')%>
